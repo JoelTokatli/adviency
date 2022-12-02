@@ -1,15 +1,12 @@
-let gifts = [
-  {
-    id: 0,
-    name: "Gorro",
-  },
+const gifts = [
+  { id: 0, name: "Gorro" },
   {
     id: 1,
-    name: "Medias",
+    name: "Sueter",
   },
   {
     id: 2,
-    name: "Sueter",
+    name: "Medias",
   },
 ];
 

@@ -1,11 +1,10 @@
-import GiftsCard from "./Components/GiftsCard";
+import Gifts from "./Components/Gifts";
 import "./Styles/App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Adviency</h1>
-      <GiftsCard />{" "}
+      <Gifts />
     </div>
   );
 }

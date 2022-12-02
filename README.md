@@ -1,6 +1,8 @@
-# Adviency
+# ¿Como Alternar entre días?
 
-🔔 Recordá que la idea es empezar la app de 0 cada día, no editar la del día anterior, si no te dan los tiempos o te parece mucho, editá la anterior, mejor poco que nada! 🔔
+- Si quieres ir viendo como ha ido quedando la aplicación, sobre-escribre la carpeta src con la que se encuentra dentro de la carpeta día-N-advency, ó busca la imagen del día dentro de la carpeta src, allí podras ver los cambios diarios sin necesidad de instalar / forkear ó clonar.
+
+# Adviency
 
 - Día 1: Para calentar motores vamos a mantener las cosas simples, mostremos una lista de regalos, 3 elementos, fijos, sin nada más.
 
