@@ -1,0 +1,60 @@
+.gifts-container {
+    background-color: #D77842;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 0px 2px black;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style-type: none;
+    width: 100%;
+}
+
+.list-item {
+    background-color: #F1E0CB;
+    padding: 5px;
+    border-radius: 4px;
+    color: #7C7E72;
+    box-shadow: 0px 0px 2px black;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    gap: 4px;
+}
+
+.form-input {
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #F1E0CB;
+    color: #7C7E72;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #d1c0ad;
+    color: #55574d;
+}
+
+.btn:active {
+    box-shadow: inset 0px 0px 2px black;
+}
+
+.name {
+    text-transform: capitalize;
+}
+
