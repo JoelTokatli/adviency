@@ -1,12 +1,12 @@
 const gifts = [
-  { id: 0, name: "Gorro" },
   {
-    id: 1,
-    name: "Sueter",
+    id: 0,
+    name: "Gorro",
   },
+  { id: 1, name: "Medias" },
   {
     id: 2,
-    name: "Medias",
+    name: "Sueter",
   },
 ];
 

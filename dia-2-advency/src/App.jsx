@@ -4,8 +4,8 @@ import "./Styles/App.css";
 function App() {
   return (
     <div className="App">
-      <h2>Adviency Challange #3</h2>
-      <GiftsCard />
+      <h1>Adviency</h1>
+      <GiftsCard />{" "}
     </div>
   );
 }
