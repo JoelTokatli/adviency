@@ -59,7 +59,7 @@ const GiftsCard = () => {
         <input
           className="form-input input-btn"
           type="submit"
-          value={`Añadir 🎁`}
+          value={`Add 🎁`}
           onClick={(e) => {
             handleClick(e);
           }}
