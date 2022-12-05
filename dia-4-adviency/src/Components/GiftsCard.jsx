@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { nanoid } from "nanoid";
 import "../Styles/GiftsCard.css";
 let data = [];
-let a = "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 const GiftsCard = () => {
   const ref = useRef(null);
   const [gifts, setGifts] = useState(data);
