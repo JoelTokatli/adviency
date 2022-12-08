@@ -1,13 +1,10 @@
 import { nanoid } from "nanoid";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "../Styles/GiftsCard.css";
 
 const GiftsCard = () => {
   const [name, setName] = useState("");
-  const [quantity, setQuantity] = useState("1");
-  const [gifts, setGifts] = useState(
-    JSON.parse(localStorage.getItem("gifts")) || []
-  );
+  const [gifts, setGifts] = useState([]);
   let ref = useRef(null);
 
   const handleChange = (e) => {
@@ -16,12 +13,6 @@ const GiftsCard = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    let data = parseFloat(quantity);
-    if (data <= 0) {
-      data = 1;
-    } else if (data >= 1000) {
-      data = 1000;
-    }
     if (
       name.valueOf().trim().length <= 2 ||
       name.valueOf().trim().length <= 0 ||
@@ -51,17 +42,12 @@ const GiftsCard = () => {
               name:
                 name.valueOf().trim().charAt(0).toUpperCase() +
                 name.valueOf().trim().slice(1).toLowerCase(),
-              data,
             },
           ]),
         (ref.current.value = "");
       setName("");
     }
   };
-
-  useEffect(() => {
-    localStorage.setItem("gifts", JSON.stringify(gifts));
-  }, [gifts]);
 
   const eraseItem = (id) => {
     let filtered = gifts.filter((gift) => gift.id != id);
@@ -71,28 +57,16 @@ const GiftsCard = () => {
   const eraseAll = () => {
     setGifts([]);
   };
-
   return (
     <div className="container">
-      <h1>Adviency Challange #8</h1>
+      <h1>Adviency Challange #7</h1>
       <h2>¡Regalos navideños!</h2>
       <form className="form">
         <input
           type="text"
           className="form-input input-text"
-          placeholder="Regalo..."
           ref={ref}
           onChange={(e) => handleChange(e)}
-        />
-        <input
-          type="number"
-          id="number"
-          required="required"
-          min={1}
-          max={1000}
-          onChange={(e) => {
-            setQuantity(e.target.value);
-          }}
         />
         <input
           type="submit"
@@ -108,14 +82,12 @@ const GiftsCard = () => {
       </p>
       <ul className="list">
         {gifts.map((gift) => {
-          const { id, name, data } = gift;
+          const { id, name } = gift;
           return (
             <li className="list-item" key={id}>
               <p className="name">
                 ❄ {``}
                 {name}
-                {``} {``}
-                {`${"("}` + data + `${")"}`} {``}
               </p>
               <button
                 className="erase btn"

@@ -5,9 +5,7 @@ import "../Styles/GiftsCard.css";
 const GiftsCard = () => {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState("1");
-  const [gifts, setGifts] = useState(
-    JSON.parse(localStorage.getItem("gifts")) || []
-  );
+  const [gifts, setGifts] = useState([]);
   let ref = useRef(null);
 
   const handleChange = (e) => {
@@ -59,10 +57,6 @@ const GiftsCard = () => {
     }
   };
 
-  useEffect(() => {
-    localStorage.setItem("gifts", JSON.stringify(gifts));
-  }, [gifts]);
-
   const eraseItem = (id) => {
     let filtered = gifts.filter((gift) => gift.id != id);
     setGifts(filtered);
@@ -112,10 +106,8 @@ const GiftsCard = () => {
           return (
             <li className="list-item" key={id}>
               <p className="name">
-                ❄ {``}
+                ❄ {``} {data} {``}
                 {name}
-                {``} {``}
-                {`${"("}` + data + `${")"}`} {``}
               </p>
               <button
                 className="erase btn"

@@ -74,7 +74,7 @@ const GiftsCard = () => {
 
   return (
     <div className="container">
-      <h1>Adviency Challange #8</h1>
+      <h1>Adviency Challange #9</h1>
       <h2>¡Regalos navideños!</h2>
       <form className="form">
         <input
@@ -112,10 +112,8 @@ const GiftsCard = () => {
           return (
             <li className="list-item" key={id}>
               <p className="name">
-                ❄ {``}
+                ❄ {``} {data} {``}
                 {name}
-                {``} {``}
-                {`${"("}` + data + `${")"}`} {``}
               </p>
               <button
                 className="erase btn"
